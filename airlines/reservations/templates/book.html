@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Airplane Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .ticket {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .ticket-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .ticket-title {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .ticket-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .info-value {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket">
+        <div class="ticket-header">
+            <h1 class="ticket-title">Virtual Airplane Ticket</h1>
+        </div>
+        <div class="ticket-info">
+            {% for ticket in ticket %}
+            <p><span class="info-label">Passenger:</span>{{ user.username }}</p>
+            <p><span class="info-label">Flight:</span> ABC123</p>
+            <p><span class="info-label">Date:</span> March 15, 2024</p>
+            <p><span class="info-label">Departure:</span> {{ticket.from1}}</p>
+            <p><span class="info-label">Destination:</span> {{ticket.to}}</p>
+            <p><span class="info-label">Departure Time:</span> 10:00 AM</p>
+            <p><span class="info-label">Seat:</span> 23A</p>
+            {% endfor %}
+
+        </div>
+        <p class="ticket-info">Thank you for booking your flight with us!
+        <a href="{% url 'clear' %}">Bording-Pass</a></p>
+    </div>
+</body>
+</html>

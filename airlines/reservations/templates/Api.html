@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Airline Reservation System</title>
+	<link rel="stylesheet" type="text/css" href="Api.css">
+</head>
+<body>
+<header>
+		<h1>Welcome to Our Airline Reservation System</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#flights">Flights</a></li>
+			<li><a href="#booking">Booking</a></li>
+			<li><a href="#manage">Manage Booking</a></li>
+			<li><a href="#loyalty">Loyalty Program</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="flights">
+			<h2>Search Flights</h2>
+			<form id="flight-search-form">
+				<label for="origin">Origin:</label>
+				<input type="text" id="origin" name="origin">
+				<label for="destination">Destination:</label>
+				<input type="text" id="destination" name="destination">
+				<label for="departure">Departure Date:</label>
+				<input type="date" id="departure" name="departure">
+				<label for="return">Return Date:</label>
+				<input type="date" id="return" name="return">
+				<button type="submit">Search</button>
+			</form>
+			<div id="flight-results"></div>
+		</section>
+		<section id="booking">
+			<h2>Booking</h2>
+			<form id="booking-form">
+				<label for="flight">Flight:</label>
+				<select id="flight" name="flight">
+					<option value="1">Flight 1 - New York to London</option>
+					<option value="2">Flight 2 - London to New York</option>
+				</select>
+				<label for="seats">Number of Seats:</label>
+				<input type="number" id="seats" name="seats" min="1" max="10">
+				<label for="passenger">Passenger Information:</label>
+				<textarea id="passenger" name="passenger"></textarea>
+				<button type="submit">Book Now</button>
+			</form>
+			<div id="booking-confirmation"></div>
+		</section>
+		<section id="manage">
+			<h2>Manage Booking</h2>
+			<form id="manage-booking-form">
+				<label for="booking">Booking Reference:</label>
+				<input type="text" id="booking" name="booking">
+				<button type="submit">Manage Booking</button>
+			</form>
+			<div id="manage-booking-results"></div>
+		</section>
+		<section id="loyalty">
+			<h2>Loyalty Program</h2>
+			<form id="loyalty-form">
+				<label for="membership">Membership Number:</label>
+				<input type="text" id="membership" name="membership">
+				<label for="points">Points Balance:</label>
+				<input type="number" id="points" name="points" readonly>
+				<label for="redeem">Redeem Points:</label>
+				<input type="number" id="redeem" name="redeem" min="0">
+				<button type="submit">Redeem Points</button>
+			</form>
+			<div id="loyalty-results"></div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Our Airline</p>
+	</footer>
+	<script src="Api.js"></script>
+</body>
+</html>

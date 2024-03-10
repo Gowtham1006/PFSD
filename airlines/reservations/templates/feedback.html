@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form id="feedbackForm" action="submit_feedback" method="post">
+        <!-- CSRF Token -->
+        {% csrf_token %}
+
+        <!-- User Information -->
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Feedback -->
+        <label for="feedback">Your Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <!-- Message Display -->
+    <div id="feedbackMessage" style="display: none;">
+        Feedback sent! Thank you.
+    </div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Display the feedback message
+            document.getElementById('feedbackMessage').style.display = 'block';
+
+            // Optional: You can also submit the form using AJAX here if needed
+            // Example:
+            // var formData = new FormData(this);
+            // fetch('submit_feedback', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+            // .then(response => {
+            //     if (response.ok) {
+            //         document.getElementById('feedbackMessage').style.display = 'block';
+            //     }
+            // })
+            // .catch(error => console.error('Error submitting feedback:', error));
+        });
+    </script>
+</body>
+</html>

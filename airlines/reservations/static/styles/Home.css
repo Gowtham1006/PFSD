@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: url('cursor\ \(2\).cur'), auto;
+}
+
+.navbar-container {
+    height: 50px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+}
+.navbar-container ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style : none;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+}
+.icon-container span{
+    align-self: flex-end;
+    bottom: 0;
+    font-size: small;
+}
+.icon-container i{
+    font-size: large;
+    margin-bottom: 20px;
+}
+.icon-container{
+    font-size: 40px;
+    margin-right: 120px;
+}
+.navbar-container a{
+    text-decoration: none;
+    color: black;
+}
+.navbar-container input{
+    width: 310px;
+    height: 30px;
+    margin-left: 80px;
+    border: none;
+    border-radius: 3px;
+    border-right: none;
+}
+.seach-icon{
+    background-color:chocolate;
+    height: 30px;
+    width: 30px;
+    font-size: 28px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.book-navabar{
+    font-size: large;
+    margin: 10px;
+}
+.manage-navbar{
+    font-size: large;
+    margin: 10px;
+}
+.checkin-navbar{
+    font-size: large;
+    margin: 10px;
+    width: 80px;
+    margin-right: 290px;
+}
+.support-navbar{
+    width: 100px;
+    text-align: center;
+    font-size: large;
+    margin: 10px;
+}
+.signup-navbar{
+    width: 80px;
+    margin: 10px;
+    font-size: large;
+}
+.images-section img{
+    width: 100%;
+    height: 100%;
+}
+.form-container{
+    background-color: darkslategrey;
+    height: 400px;
+    width: 1000px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 15%;
+}
+.from-to-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.from-to-container input{
+    height: 48px;
+    width: 250px;
+    border:none ;
+    box-shadow: none;
+    border-radius: 2px;
+    margin: 10px;
+}
+.searchFlight-button button{
+    background-color: rgb(0, 76, 255);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    align-self: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+.reverse-icon{
+    cursor: pointer;
+    font-size: large;
+    color: aliceblue;
+}
+
+.trip-info select{
+    background-color: darkslategrey;
+    border-color: darkslategrey;
+    border-radius: 5px;
+    color:white ;
+}
+.popup{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+        .popup-button {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 9999;
+        }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boarding Pass & FAQ's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .boarding-pass, .faq {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .faq h3 {
+            margin-top: 0;
+        }
+        .faq ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .faq li {
+            margin-bottom: 10px;
+        }
+        .masked {
+            font-size: 16px;
+            color: transparent;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Boarding Pass</h1>
+        <div class="boarding-pass">
+            <p>Passenger: *********</p>
+            <p>Flight: ABC123</p>
+            <p>Date: March 10, 2024</p>
+            <p>Seat: **A</p>
+            <p>Gate: 5</p>
+        </div>
+
+        <h2>FAQ's</h2>
+        <div class="faq">
+            <h3>What do I need to bring to the airport?</h3>
+            <p>You will need your boarding pass and a valid photo ID (such as a passport or driver's license).</p>
+
+            <h3>How early should I arrive at the airport?</h3>
+            <p>It's recommended to arrive at least 2 hours before your domestic flight and 3 hours before your international flight.</p>
+
+            <h3>Can I bring my pet on the flight?</h3>
+            <p>Most airlines have specific policies regarding pets. Contact your airline for more information.</p>
+
+            <h3>What happens if my flight is delayed or canceled?</h3>
+            <p>If your flight is delayed or canceled, the airline will usually provide alternative arrangements. Check with airline staff for assistance.</p>
+        </div>
+        <a id="downloadLink" href="home" download="Boarding-Pass">Download the PDF</a>
+
+        <script>
+            // Add event listener for when the download is complete
+            document.getElementById('downloadLink').addEventListener('click', function() {
+                // Redirect to home page after 3 seconds
+                setTimeout(function() {
+                    window.location.href = "http://127.0.0.1:8000";
+                }, 2000); // 3000 milliseconds = 3 seconds
+            });
+        </script>
+    </div>
+</body>
+</html>
